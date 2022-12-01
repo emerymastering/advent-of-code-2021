@@ -16,16 +16,18 @@ const input = fs
 
 let forward = 0;
 let depth = 0;
+let aim = 0;
 
 // Calculating the coordinates
 
 for (let { movement, amount } of input) {
   if (movement === "up") {
-    depth -= amount;
+    aim -= amount;
   } else if (movement === "down") {
-    depth += amount;
+    aim += amount;
   } else if (movement === "forward") {
     forward += amount;
+    depth += aim * amount;
   }
 }
 
