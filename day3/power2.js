@@ -14,6 +14,8 @@ const dataObj = Object.assign({}, input);
 
 console.log(dataObj);
 
+// Creating object with the amounts of 1s and 0s in each column
+
 let countObj = {};
 
 for (let line of Object.values(dataObj)) {
@@ -29,7 +31,7 @@ for (let line of Object.values(dataObj)) {
     }
   }
 }
-// console.log(countObj);
+console.log("coounting:", countObj);
 
 let code = [];
 let reverseCode = [];
